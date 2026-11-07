@@ -1,0 +1,22 @@
+# 构建产物
+build/
+*.o
+
+# 日志 / 备份 / 系统文件
+*.log
+*.bak*
+.DS_Store
+
+# 密钥与本地配置（绝不入库）
+*.env
+.env
+aic8800-app.local.sh
+
+# libusb 源码（用脚本下载，勿入库）
+libusb-1.0.27/
+
+# 厂商固件二进制（版权归 AICSemi，不随源码再分发；用 scripts/fetch-firmware.sh 提取）
+app/Resources/fw/
+
+# 预编译二进制（从 src/ 用 scripts/build-tool.sh 构建，勿入库）
+app/Resources/aic8800-tool
